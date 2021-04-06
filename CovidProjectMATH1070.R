@@ -333,7 +333,7 @@ TB
 library(xtable)
 xtable(TB, digits = 3)
 
-
+# Figure for individual student
 
 i <- 27
 plot(density(BETA.ps.a[,i] + BETA.ps.b[,i],adj=2),xlim=range(c(BETA.ps.a[,i], BETA.ps.a[,i] + BETA.ps.b[,i])), ylim=c(0, 0.58), 
