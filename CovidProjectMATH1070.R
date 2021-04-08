@@ -171,7 +171,7 @@ set.seed(1)
 for(r in 1:R) {
 
   #sample new s20 (the overall variance)
-  s20<-rgamma(1, shape = alpha1+(m*nu0)/2, rate = alpha2+(nu0/2)*sum(1/s2))
+  s20<-rgamma(1, alpha1+(m*nu0)/2, alpha2+(nu0/2)*sum(1/s2))
   
   # sample nu0 (the strength of the overall variance)
   
@@ -184,7 +184,7 @@ for(r in 1:R) {
   for(j in 1:m) {
     RSS <- 0
     RSS <- (Y[[j]]-X[[j]]%*%BETA[j,] )^2
-    s2[j] <-1/rgamma(1, shape = (nu0+ d)/2, rate = (nu0*s20+RSS)/2 )
+    s2[j] <-1/rgamma(1, (nu0+ d)/2, (nu0*s20+RSS)/2 )
   }
   ##
   
